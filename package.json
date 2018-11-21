@@ -1,0 +1,40 @@
+{
+    "name": "dwarvesforge-wp-stack-snippets",
+    "displayName": "Dwarvesforge WP-Stack Snippets",
+    "description": "Dwarvesforge WP-Stack Visual Studio Code Snippets",
+    "version": "1.0.0",
+    "publisher": "Dwarvesforge",
+    "icon": ".resources/icon.png",
+    "scripts": {
+        "build": "node .scripts/snippets.js",
+        "publish": "vsce publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Dwarvesforge/wp-stack-vsce-snippets-extension"
+    },
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "galleryBanner": {
+        "color": "#d6a727",
+        "theme": "dark"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "php",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "coffeekraken-docblock-parser": "^1.0.10",
+        "glob-all": "^3.1.0",
+        "lodash": "^4.17.11"
+    }
+}
