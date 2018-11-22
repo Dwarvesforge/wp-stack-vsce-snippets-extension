@@ -1,4 +1,14 @@
 {
+  "WPS::add_wysiwyg_class": {
+    "prefix": "WPS::add_wysiwyg_class",
+    "body": "WPS::add_wysiwyg_class(${1:string|array<string> \\$classes})",
+    "description": "Add one or more classes to the eysiwyg editor.\n"
+  },
+  "WPS::add_wysiwyg_stylesheet": {
+    "prefix": "WPS::add_wysiwyg_stylesheet",
+    "body": "WPS::add_wysiwyg_stylesheet(${1:string|array<string> \\$stylesheets})",
+    "description": "Add one or more stylesheet files to the eysiwyg editor.\n"
+  },
   "WPS::archives": {
     "prefix": "WPS::archives",
     "body": "WPS::archives(${1:array \\$args = []})",
@@ -74,6 +84,11 @@
     "body": "WPS::next_posts_url()",
     "description": "Get back the next posts url\n"
   },
+  "WPS::popular_posts_for_category": {
+    "prefix": "WPS::popular_posts_for_category",
+    "body": "WPS::popular_posts_for_category(${1:integer \\$category}, ${2:integer \\$count = 3}, ${3:array \\$args = []})",
+    "description": "Retrieve some popular posts for a given category depending on the args passed.\nThe args are the same as the one passed to the `get_posts` wordpress function.\n\nThis function need the use of the `WPS::count_post_views` one to count the times a post is viewed.\nSimply call the `WPS:count_post_views()` inside your `functions.php`.\n"
+  },
   "WPS::popular_posts": {
     "prefix": "WPS::popular_posts",
     "body": "WPS::popular_posts(${1:integer \\$count = 3}, ${2:array \\$args = []})",
@@ -104,10 +119,20 @@
     "body": "WPS::previous_posts_url()",
     "description": "Get back the previous posts url\n"
   },
+  "WPS::random_posts": {
+    "prefix": "WPS::random_posts",
+    "body": "WPS::random_posts(${1:array \\$args = []})",
+    "description": "Retrieve some random posts depending on the args passed.\nThe args are the same as the one passed to the `get_posts` wordpress function."
+  },
   "WPS::recent_posts": {
     "prefix": "WPS::recent_posts",
     "body": "WPS::recent_posts(${1:array \\$args = []})",
     "description": "Get some recent posts depending on the arguments you've passed.\nThe arguments are the same as the one of `wp_get_recent_posts` wordpress function.\nThis function return an array of WPS\\Post objects."
+  },
+  "WPS::related_posts": {
+    "prefix": "WPS::related_posts",
+    "body": "WPS::related_posts(${1:integer \\$post_id}, ${2:integer \\$count = 3}, ${3:array \\$args = []})",
+    "description": "Retrieve some related posts depending on the args passed.\nThe args are the same as the one passed to the `get_posts` wordpress function.\nBy default, the posts order is set to random but you can erase that by passing the corresponding args properties.\nThis function works with the tags similarities between the reequested related post.\n"
   },
   "WPS::search_results_per_page": {
     "prefix": "WPS::search_results_per_page",
