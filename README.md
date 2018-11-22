@@ -1,19 +1,19 @@
-# Dwarvesforge Thorin Snippets
+# Dwarvesforge WP-Stack Snippets
 
-PHP toolkit that offers you some nice helpers, missing functions, advanced capabilities through vendors, etc...
+Wordpress stack that gives you nice classes as wrapper of the wordpress ones as well as some nice helper functions.
 
-This extension gives you access to snippets for all the Thorin functions like:
+This extension gives you access to snippets for all the WP-Stack functions like:
 
-- `Thorin::array_all`
-- `Thorin::array_any`
-- `Thorin::fs_archive_files`
-- `Thorin::fs_extract_files`
+- `WPS::archives`
+- `WPS::post`
+- `WPS::make_featured_image_required`
+- `WPS::popular_posts`
 - etc...
 
 ## Publishing the extension
 
 1. Follow [these instructions](https://code.visualstudio.com/docs/extensions/publish-extension#_get-a-personal-access-token) to create a personal access token
-2. Make sure you are part of the [`Thorin` project](https://dev.azure.com/dwarvesforge/Thorin)
+2. Make sure you are part of the [`WP-Stack` project](https://dev.azure.com/dwarvesforge/WP-Stack)
 3. The extension is published under the `Dwarvesforge` publisher in the [`Dwarvesforge` organisation](https://dev.azure.com/dwarvesforge/)
 
 <a id="readme-contribute"></a>
