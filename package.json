@@ -2,7 +2,7 @@
     "name": "dwarvesforge-wp-stack-snippets",
     "displayName": "Dwarvesforge WP-Stack Snippets",
     "description": "Dwarvesforge WP-Stack Visual Studio Code Snippets",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "Dwarvesforge",
     "icon": ".resources/icon.png",
     "scripts": {
