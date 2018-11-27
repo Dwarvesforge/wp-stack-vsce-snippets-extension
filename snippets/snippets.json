@@ -1,4 +1,14 @@
 {
+  "WPS::acf_add_load_local_json_path": {
+    "prefix": "WPS::acf_add_load_local_json_path",
+    "body": "WPS::acf_add_load_local_json_path(${1:string \\$path})",
+    "description": "Add a custom local json path for ACF to look in\n"
+  },
+  "WPS::acf_set_local_json_path": {
+    "prefix": "WPS::acf_set_local_json_path",
+    "body": "WPS::acf_set_local_json_path(${1:string \\$path})",
+    "description": "Set a custom local json path for ACF to look and save in\n"
+  },
   "WPS::add_wysiwyg_class": {
     "prefix": "WPS::add_wysiwyg_class",
     "body": "WPS::add_wysiwyg_class(${1:string|array<string> \\$classes})",
@@ -8,6 +18,41 @@
     "prefix": "WPS::add_wysiwyg_stylesheet",
     "body": "WPS::add_wysiwyg_stylesheet(${1:string|array<string> \\$stylesheets})",
     "description": "Add one or more stylesheet files to the eysiwyg editor.\n"
+  },
+  "WPS::disable_admin_bar": {
+    "prefix": "WPS::disable_admin_bar",
+    "body": "WPS::disable_admin_bar()",
+    "description": "Disable the admin bar in the frontend\n"
+  },
+  "WPS::enable_options_page": {
+    "prefix": "WPS::enable_options_page",
+    "body": "WPS::enable_options_page()",
+    "description": "Enable the \"WPS Options\" page which allow to set some options for your wordpress like disabling some dashboard widgets, etc...\n"
+  },
+  "WPS::remove_try_guttenberg_panel": {
+    "prefix": "WPS::remove_try_guttenberg_panel",
+    "body": "WPS::remove_try_guttenberg_panel()",
+    "description": "Remove the try guttenberg panel in the admin\n"
+  },
+  "WPS::remove_welcome_panel": {
+    "prefix": "WPS::remove_welcome_panel",
+    "body": "WPS::remove_welcome_panel()",
+    "description": "Remove welcome panel in admin\n"
+  },
+  "WPS::reset_dashboard": {
+    "prefix": "WPS::reset_dashboard",
+    "body": "WPS::reset_dashboard()",
+    "description": "Reset the dashboard by removing all the meta boxes\n"
+  },
+  "WPS::set_login_logo_url": {
+    "prefix": "WPS::set_login_logo_url",
+    "body": "WPS::set_login_logo_url(${1:string \\$url})",
+    "description": "Set the login form logo url\n"
+  },
+  "WPS::set_login_logo": {
+    "prefix": "WPS::set_login_logo",
+    "body": "WPS::set_login_logo(${1:string \\$url}, ${2:integer \\$width = null}, ${3:integer \\$height = null})",
+    "description": "Set the login form logo to display\n"
   },
   "WPS::archives": {
     "prefix": "WPS::archives",
@@ -49,6 +94,36 @@
     "body": "WPS::make_featured_image_required(${1:array \\$post_types = ['post']})",
     "description": "Make the featured image required\n"
   },
+  "WPS::is_administrator": {
+    "prefix": "WPS::is_administrator",
+    "body": "WPS::is_administrator()",
+    "description": "Detect if the user is an administrator\n"
+  },
+  "WPS::is_author": {
+    "prefix": "WPS::is_author",
+    "body": "WPS::is_author()",
+    "description": "Detect if the user is an author\n"
+  },
+  "WPS::is_contributor": {
+    "prefix": "WPS::is_contributor",
+    "body": "WPS::is_contributor()",
+    "description": "Detect if the user is a contributor\n"
+  },
+  "WPS::is_editor": {
+    "prefix": "WPS::is_editor",
+    "body": "WPS::is_editor()",
+    "description": "Detect if the user is an editor\n"
+  },
+  "WPS::is_super_admin": {
+    "prefix": "WPS::is_super_admin",
+    "body": "WPS::is_super_admin()",
+    "description": "Detect if the user is a super_admin\n"
+  },
+  "WPS::is_visitor": {
+    "prefix": "WPS::is_visitor",
+    "body": "WPS::is_visitor()",
+    "description": "Detect if the user is a visitor and not a logged in administrator or content editor\n"
+  },
   "WPS::add_mime_types": {
     "prefix": "WPS::add_mime_types",
     "body": "WPS::add_mime_types(${1:array \\$mimes})",
@@ -59,10 +134,25 @@
     "body": "WPS::remove_mime_types(${1:array \\$mimes})",
     "description": "Remove some mime types supported for upload\n"
   },
+  "WPS::upload_size_limit": {
+    "prefix": "WPS::upload_size_limit",
+    "body": "WPS::upload_size_limit(${1:integer \\$size})",
+    "description": "Set the upload limit size for this wordpress installation.\nThis value has to be passed in mb.\n"
+  },
   "WPS::menu": {
     "prefix": "WPS::menu",
     "body": "WPS::menu(${1:string \\$name})",
     "description": "Get back the requested menu in object format. Each item is a WPS\\Menu_Item object\nthat can contains the sub-item depending on the menu structure.\nThis function is very usefull to create simple as well as complexe menu without the\nweird wordpress menu functions. Here you have the raw menu structured\nin an array of objects that you can use to generate your menu easily."
+  },
+  "WPS::get_meta_boxes": {
+    "prefix": "WPS::get_meta_boxes",
+    "body": "WPS::get_meta_boxes(${1:string \\$screen}, ${2:string \\$context})",
+    "description": "Get meta boxes\n"
+  },
+  "WPS::remove_dashboard_meta_boxes": {
+    "prefix": "WPS::remove_dashboard_meta_boxes",
+    "body": "WPS::remove_dashboard_meta_boxes(${1:array \\$ids})",
+    "description": "Remove some dashboard meta boxes by passing ther ids\n"
   },
   "WPS::pagination": {
     "prefix": "WPS::pagination",
@@ -149,40 +239,45 @@
     "body": "WPS::users_count()",
     "description": "Get the number of registered users in the DB\n"
   },
+  "WPS::auth_cookie_expiration": {
+    "prefix": "WPS::auth_cookie_expiration",
+    "body": "WPS::auth_cookie_expiration(${1:integer \\$timeout})",
+    "description": "Set the authentication cookie expiration in seconds\n"
+  },
   "WPS::count_post_views": {
     "prefix": "WPS::count_post_views",
     "body": "WPS::count_post_views()",
-    "description": "Count the number of views on each posts (pages, etc...).\nThis function will add and maintain a post meta value called `post_viewed` that you can use later for to make queries.\n"
+    "description": "Count the number of views on each posts (pages, etc...) only for real visitors and not for connected administrators, authors, etc...\nThis function will add and maintain a post meta value called `post_viewed` that you can use later for to make queries.\n"
   },
-  "WPS::disable_admin_bar": {
-    "prefix": "WPS::disable_admin_bar",
-    "body": "WPS::disable_admin_bar()",
-    "description": "Disable the admin bar in the frontend\n"
+  "WPS::dequeue_all_scripts": {
+    "prefix": "WPS::dequeue_all_scripts",
+    "body": "WPS::dequeue_all_scripts()",
+    "description": "Unenqueue all scripts at once\n"
+  },
+  "WPS::dequeue_all_styles": {
+    "prefix": "WPS::dequeue_all_styles",
+    "body": "WPS::dequeue_all_styles()",
+    "description": "Unenqueue all styles at once\n"
   },
   "WPS::excerpt_length": {
     "prefix": "WPS::excerpt_length",
-    "body": "WPS::excerpt_length(${1:integer \\$length = 100})",
+    "body": "WPS::excerpt_length(${1:integer \\$length = 20})",
     "description": "Change the excerpt length\n"
   },
   "WPS::google_analytics": {
     "prefix": "WPS::google_analytics",
     "body": "WPS::google_analytics(${1:string \\$id}, ${2:string \\$position = 'head'})",
-    "description": "Add google analytics\n"
+    "description": "Add google analytics only for real visitors and not for connected administrators, authors, etc...\n"
   },
   "WPS::google_tag_manager": {
     "prefix": "WPS::google_tag_manager",
     "body": "WPS::google_tag_manager(${1:string \\$id}, ${2:string \\$position = 'head'})",
-    "description": "Add google tag manager\n"
+    "description": "Add google tag manager only for real visitors and not for connected administrators, authors, etc...\n"
   },
   "WPS::remove_version": {
     "prefix": "WPS::remove_version",
     "body": "WPS::remove_version()",
     "description": "Remove the wordpress version in the metas tags\n"
-  },
-  "WPS::remove_welcome_panel": {
-    "prefix": "WPS::remove_welcome_panel",
-    "body": "WPS::remove_welcome_panel()",
-    "description": "Remove welcome panel in admin\n"
   },
   "WPS::session_start": {
     "prefix": "WPS::session_start",
